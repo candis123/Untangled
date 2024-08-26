@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shania website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333; /* Dark Gray for better readability on a light background */
+            background-color: #f8f8f8;
+        }
+
+        .background {
+            background: linear-gradient(135deg, #f8e1ff, #fde6e6); /* Light Purple and Pink */
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #6a0dad; /* Purple for a strong header */
+            font-size: 36px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .container p {
+            margin: 10px 0;
+            color: #6a0dad; /* Purple text */
+        }
+
+        select {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #fde6e6; /* Light pink background */
+            color: #6a0dad; /* Purple text */
+            border: 1px solid #6a0dad; /* Purple border */
+        }
+
+        .dynamic-display {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .display-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin: 10px;
+            border: 2px solid #6a0dad; /* Purple border */
+        }
+
+        .tips {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #333; /* Dark Gray for readability */
+        }
+
+        .contact {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .contact h2, .contact h3 {
+            margin: 10px 0;
+            color: #6a0dad; /* Purple text */
+        }
+
+        .contact p {
+            color: #333; /* Dark Gray text */
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <header>
+            <h1>Welcome to Shania's Untangled</h1>
+        </header>
+
+        <section class="gallery">
+            <div class="container">
+                <img src="image1.jpg" alt="Hair Style 1">
+                <p>Style 1</p>
+                <select id="style1-price" onchange="updatePrice('style1-price')">
+                    <option value="0">Select Price</option>
+                    <option value="50">$50 - Basic</option>
+                    <option value="75">$75 - Intermediate</option>
+                    <option value="100">$100 - Advanced</option>
+                </select>
+            </div>
+            <div class="container">
+                <img src="image2.jpg" alt="Hair Style 2">
+                <p>Style 2</p>
+                <select id="style2-price" onchange="updatePrice('style2-price')">
+                    <option value="0">Select Price</option>
+                    <option value="60">$60 - Basic</option>
+                    <option value="85">$85 - Intermediate</option>
+                    <option value="110">$110 - Advanced</option>
+                </select>
+            </div>
+            <div class="container">
+                <img src="image3.jpg" alt="Hair Style 3">
+                <p>Style 3</p>
+                <select id="style3-price" onchange="updatePrice('style3-price')">
+                    <option value="0">Select Price</option>
+                    <option value="70">$70 - Basic</option>
+                    <option value="95">$95 - Intermediate</option>
+                    <option value="120">$120 - Advanced</option>
+                </select>
+            </div>
+            <div class="container">
+                <img src="image4.jpg" alt="Hair Style 4">
+                <p>Style 4</p>
+                <select id="style4-price" onchange="updatePrice('style4-price')">
+                    <option value="0">Select Price</option>
+                    <option value="80">$80 - Basic</option>
+                    <option value="105">$105 - Intermediate</option>
+                    <option value="130">$130 - Advanced</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="dynamic-display">
+            <div class="display-item">
+                <img src="image5.jpg" alt="Display Image 1">
+            </div>
+            <div class="display-item">
+                <img src="image6.jpg" alt="Display Image 2">
+            </div>
+            <div class="display-item">
+                <img src="image7.jpg" alt="Display Image 3">
+            </div>
+            <div class="display-item">
+                <img src="image8.jpg" alt="Display Image 4">
+            </div>
+            <div class="display-item">
+                <img src="image9.jpg" alt="Display Image 5">
+            </div>
+        </section>
+
+        <section class="tips">
+            <p>Note: Please remember to bring your own hair extensions for your appointment.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <p>Email: yourname@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <h3>Payment Information</h3>
+            <p>CashApp: $YourCashAppID</p>
+            <p>Zelle: yourname@example.com</p>
+            <p>PayPal: paypal.me/YourPayPalID</p>
+        </section>
+    </div>
+    <script>
+        function updatePrice(styleId) {
+            const selectedPrice = document.getElementById(styleId).value;
+            if (selectedPrice != 0) {
+                alert(`You have selected the price: $${selectedPrice}`);
+            }
+        }
+    </script>
+</body>
+</html>
