@@ -9,17 +9,15 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            color: #333; /* Dark Gray for better readability on a light background */
+            color: #333;
             background-color: #f8f8f8;
         }
 
         .background {
-            background: linear-gradient(135deg, #f8e1ff, #fde6e6); /* Light Purple and Pink */
+            background: linear-gradient(135deg, #f8e1ff, #fde6e6);
             background-size: cover;
             background-position: center;
-            height: 100%;
-            width: 100%;
-            position: relative;
+            min-height: 100vh;
             padding: 20px;
             color: #333;
         }
@@ -30,87 +28,138 @@
         }
 
         h1 {
-            color: #6a0dad; /* Purple for a strong header */
-            font-size: 36px;
+            color: #6a0dad;
+            font-size: 32px;
         }
 
         .gallery {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin-bottom: 40px;
         }
 
         .container {
             text-align: center;
-            background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+            background: rgba(255, 255, 255, 0.9);
             padding: 10px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: calc(50% - 20px);
         }
 
         .container img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
             border-radius: 10px;
         }
 
         .container p {
             margin: 10px 0;
-            color: #6a0dad; /* Purple text */
+            color: #6a0dad;
         }
 
         select {
             padding: 5px;
             border-radius: 5px;
-            background-color: #fde6e6; /* Light pink background */
-            color: #6a0dad; /* Purple text */
-            border: 1px solid #6a0dad; /* Purple border */
+            background-color: #fde6e6;
+            color: #6a0dad;
+            border: 1px solid #6a0dad;
+            width: 100%;
         }
 
         .dynamic-display {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin-bottom: 40px;
         }
 
         .display-item img {
-            width: 150px;
-            height: 150px;
+            width: 100%;
+            max-width: 150px;
+            height: auto;
             border-radius: 10px;
             margin: 10px;
-            border: 2px solid #6a0dad; /* Purple border */
+            border: 2px solid #6a0dad;
         }
 
         .tips {
             text-align: center;
             margin: 20px 0;
             font-size: 18px;
-            color: #333; /* Dark Gray for readability */
+            color: #333;
         }
 
         .contact {
             text-align: center;
-            background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
             margin-top: 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .contact h2, .contact h3 {
             margin: 10px 0;
-            color: #6a0dad; /* Purple text */
+            color: #6a0dad;
         }
 
         .contact p {
-            color: #333; /* Dark Gray text */
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                width: calc(100% - 20px);
+            }
+
+            .display-item img {
+                max-width: 100px;
+            }
+
+            .tips {
+                font-size: 16px;
+            }
+
+            .contact {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .container img {
+                max-width: 150px;
+            }
+
+            .display-item img {
+                max-width: 80px;
+            }
+
+            .tips {
+                font-size: 14px;
+            }
+
+            .contact h2, .contact h3 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="background">
         <header>
-            <h1>Welcome to Shania's Untangled</h1>
+            <h1>Welcome to [Your Name]'s Hair Studio</h1>
         </header>
 
         <section class="gallery">
@@ -179,9 +228,9 @@
         </section>
 
         <section class="contact">
-            <h2>Contact Information</h2>
+            <h2>Shania Cartwright Contact Information</h2>
             <p>Email: yourname@example.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Phone: (813) 573-5610</p>
             <h3>Payment Information</h3>
             <p>CashApp: $YourCashAppID</p>
             <p>Zelle: yourname@example.com</p>
